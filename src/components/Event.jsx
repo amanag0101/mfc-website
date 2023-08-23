@@ -37,7 +37,10 @@ export const Event = () => {
 
   const nextSlide = () => {
     if (slideIndex === slides.length - 1) setSlideIndex(0);
-    else setSlideIndex(slideIndex + 1);
+    else{
+      setSlideIndex(slideIndex + 1);
+      
+    }
   };
 
   const prevSlide = () => {
@@ -51,8 +54,8 @@ export const Event = () => {
 
   return (
     <div className={styles.events}>
+      <div className={styles.subevents}>
       <h1 className={styles.heading}>Events</h1>
-
       <div className={styles.about}>
         <p>
           MFC VIT Boasts A Wide Array Of Successful Events Conducted Throughout
@@ -88,7 +91,9 @@ export const Event = () => {
           <p className={styles.prev_slide} onClick={prevSlide}>
             {"<"}
           </p>
+          <div className={styles.col_0}>
           <img className={styles.col_1} src={slides[slideIndex + 0]} />
+          </div>
           <div className={styles.col_2}>
             <h1>{slideContent[slideIndex].heading}</h1>
             <p>
@@ -99,7 +104,9 @@ export const Event = () => {
             {">"}
           </p>
         </div>
-        <Button className={styles.register}>Register</Button>
+        
+      </div>
+      <Button className={styles.register}>Register</Button>
       </div>
     </div>
   );

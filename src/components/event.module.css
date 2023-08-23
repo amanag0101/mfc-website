@@ -1,7 +1,16 @@
 .events {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: #222;
     color: #fff;
-    height: 100vh;
+    height: 100%;
+}
+
+.events .subevents{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .events .heading {
@@ -51,21 +60,25 @@
     flex-basis: 50%;
 }
 
-.events .carousel .content .col_1 {
+.events .carousel .content .col_0 {
     object-fit: contain;
     height: 50vh;
     width: 50%;
+}
+
+.events .carousel .content .col_1 {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
 }
 
 .events .carousel .content .col_2 {
     text-align: center;
 }
 
-.events .carousel .register {
+.events .subevents .register {
     background-color: #f9a826;
     color: #000;
-    position: absolute;
-    right: 0;
     margin-top: 6px;
 }
 
